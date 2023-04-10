@@ -1,12 +1,12 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Home from './pages/Home/Home';
-import About from './pages/About/About';
-import Sidebar from './components/Sidebar/Sidebar';
+import Sidebar from "./components/Sidebar/Sidebar";
+import Explore from "./pages/Explore/Explore";
 
 const Layout = () => {
   return (
     <div className="layout">
-      <Sidebar />
+      <Sidebar/>
       <div className="outlet">
         <Outlet />
       </div>
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { path: "/", element: <Home /> },
-      { path: "/about", element: <About /> },
+      { path: "/explore", element: <Explore /> },
     ],
   },
 ]);
