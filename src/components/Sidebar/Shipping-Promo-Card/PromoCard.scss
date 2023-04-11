@@ -7,7 +7,10 @@
     padding: 16px;
     border: 2px solid black;
       box-shadow: .2rem .2rem #05060f;
+      margin-bottom: 50px;
+      
     .close__btn{
+        cursor: pointer;
         img{
             margin-left: auto;
         }
@@ -36,27 +39,10 @@
                 }
             }
             p{
-                font-size: 12px;
-                font-weight: 400;
-                line-height: 18px;
-                color: #626264;
                 margin-bottom: 32px;
             }
         }
-        .card__order__btn{
-            width: 85%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            column-gap: 16px;
-            background-color: #503E9D;
-            border-radius: 10px;
-            font-weight: 700;
-            color: #fff;
-            padding: 12px 0;
-            border: 2px solid black;
-            box-shadow: .2rem .2rem #05060f;
-        }
+        
     }
 }
 

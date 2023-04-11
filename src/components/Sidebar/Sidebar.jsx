@@ -5,6 +5,9 @@ import homeIcon from '../../assets/images/icons/home-icon.svg'
 import bookmarkIcon from '../../assets/images/icons/bookmark-icon.svg'
 import settingsIcon from '../../assets/images/icons/settings-icon.svg'
 import messagesIcon from '../../assets/images/icons/messages-icon.svg'
+import ordersIcon from '../../assets/images/icons/orders-icon.svg'
+import exploreIcon from '../../assets/images/icons/explore-icon.svg'
+import userImage from '../../assets/images/user-image.svg'
 import PromoCard from './Shipping-Promo-Card/PromoCard';
 const navItems = [
   {
@@ -16,7 +19,7 @@ const navItems = [
   {
     id: 2,
     title: "Explore",
-    icon: homeIcon,
+    icon: exploreIcon,
     path: "/explore",
   },
   {
@@ -28,7 +31,7 @@ const navItems = [
   {
     id: 4,
     title: "Orders",
-    icon: homeIcon,
+    icon: ordersIcon,
     path: "/orders",
   },
   {
@@ -52,10 +55,7 @@ const Sidebar = () => {
     <div className="sidebar">
     <div className="sidebar__top">
       <div className="sidebar__img">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLe5PABjXc17cjIMOibECLM7ppDwMmiDg6Dw&usqp=CAU"
-          alt=""
-        />
+        {/* <img src="" alt="" /> */}
       </div>
       <h3>Nibble</h3>
     </div>
@@ -70,12 +70,21 @@ const Sidebar = () => {
             }`}
           >
             <img src={item.icon} alt="" />
-            <span>{item.title}</span>
+            <h4>{item.title}</h4>
           </Link>
         ))
       }
     </div>
       <PromoCard />
+      <div className="sidebar__user">
+        <div className="sidebar__user__img">
+          {/* <img src={userImage} alt="" /> */}
+          </div>
+          <div className="sidebar__user__info">
+            <h5>John Doe</h5>
+            <span className='caption-1'>markclarke@gmail.com</span>
+          </div>
+      </div>
   </div>
   )
 }

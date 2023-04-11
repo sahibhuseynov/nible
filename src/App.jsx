@@ -2,12 +2,14 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Home from './pages/Home/Home';
 import Sidebar from "./components/Sidebar/Sidebar";
 import Explore from "./pages/Explore/Explore";
+import Navigation from "./components/Navigation/Navigation";
 
 const Layout = () => {
   return (
     <div className="layout">
       <Sidebar/>
       <div className="outlet">
+        <Navigation />
         <Outlet />
       </div>
     </div>

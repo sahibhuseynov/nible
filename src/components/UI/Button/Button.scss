@@ -1,0 +1,29 @@
+@import '../../../styles/index.scss';
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    mix-blend-mode: normal;
+    border: 2px solid #000000;
+    box-shadow: 2px 2px 0px #000000;
+    background: #503E9D;
+    color: #F7FAFC;
+    &-large{
+        padding: 16px 32px;
+    }
+    &-mediumIcon{
+        width: 176px;
+        padding: 12px 12px 12px 32px;
+        column-gap: 16px;
+        border-radius: 10px;
+    }
+    &-medium{
+        padding: 12px 16px;
+    }
+    &-small{
+        padding: 8px 16px;
+        border-radius: 8px;
+
+    }
+}
