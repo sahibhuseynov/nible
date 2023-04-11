@@ -1,0 +1,154 @@
+@import '../../styles/index.scss';
+
+.navigation__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // column-gap: 50px;
+    @include tablet{
+        column-gap: 32px;
+    }
+    .navigation__left{
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        column-gap: 26px;
+        @include laptop {
+            display: none;
+        }
+        .nav__left__item{
+            display: flex;
+            align-items: center;
+            column-gap: 12px;
+            span{
+                @include desktop3{
+                    display: none;
+                }
+            }
+            h5{
+                font-weight: 600;
+                color:#182135
+                
+            }
+            .arrow__group{
+                display: flex;
+                flex-direction: column;
+                row-gap: 4px;
+            }
+        }
+      
+    }
+    .back__item{
+        @include flex-center;
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        cursor: pointer;
+        background: #503E9D;
+    }
+    .hamburger__menu{
+        @include flex-center;
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        cursor: pointer;
+        background: #503E9D;
+        display: none;
+        @include tablet{
+            display: flex;
+        }
+        
+    }
+    .searchbar{
+        width: 100%;
+        cursor: text;
+        .input__container{
+            width: 385px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            flex-direction: row-reverse;
+            column-gap: 20px;
+            background: #F7F7F7;
+            padding: 12px 16px;
+            border-radius: 10px;
+            transition: $transition;
+            @include desktop2{
+                width: 300px;
+            }
+            @include laptop{
+                width: 100%;
+            }
+            @include tablet{
+                margin-left: auto;
+                width: 48px;
+                height: 48px;
+            }
+            input{
+                width: 100%;
+                border: none;
+                background: transparent;
+                outline: none;
+                
+                @include tablet{
+                    display: none;
+                }
+            }
+            
+        }
+        .mobile{
+            width: 100%;
+            input{
+                display: flex;
+            }
+        }
+    }
+   
+    .navigation__right{
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        @include laptop{
+            width: 100%;
+        }
+        @include tablet{
+            width: auto;
+        }
+        .product-list-filter-cart{
+            display: flex;
+            align-items: center;
+            column-gap: 16px;
+            .product-list-filter{
+                @include flex-center;
+                width: 48px;
+                height: 48px;
+                border-radius: 10px;
+                cursor: pointer;
+                background: #503E9D;
+                @include tablet{
+                    display: none;
+                }
+            }
+            .filter__active{
+                @include tablet{
+                    display: flex;
+                }
+            }
+            .product-list-cart{
+                @include flex-center;
+                width: 48px;
+                height: 48px;
+                border-radius: 10px;
+                cursor: pointer;
+                background: #FB6D3A;
+            }
+            .cart__none{
+                display: none;
+            }
+        }
+
+    }
+    .full{
+        width: 100%;
+    }
+}

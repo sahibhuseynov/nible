@@ -67,3 +67,10 @@ span.caption-1{
     line-height: 16px;
     color: #626264;
 }
+
+//
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -8,7 +8,9 @@
     border: 2px solid black;
       box-shadow: .2rem .2rem #05060f;
       margin-bottom: 50px;
-      
+      @include tablet{
+        display: none;
+      }
     .close__btn{
         cursor: pointer;
         img{
@@ -21,9 +23,7 @@
         align-items: center;
         text-align: center;
         .card__img{
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex-center;
             width: 64px;
             height: 64px;
             border-radius: 12px;

@@ -3,6 +3,7 @@ import Home from './pages/Home/Home';
 import Sidebar from "./components/Sidebar/Sidebar";
 import Explore from "./pages/Explore/Explore";
 import Navigation from "./components/Navigation/Navigation";
+import Search from "./pages/Search/Search";
 
 const Layout = () => {
   return (
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/explore", element: <Explore /> },
+      { path: "/search", element: <Search />}
     ],
   },
 ]);
