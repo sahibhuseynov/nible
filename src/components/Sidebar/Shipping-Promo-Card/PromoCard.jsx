@@ -1,7 +1,7 @@
 import React from "react";
 import "./PromoCard.scss";
 import fireIcon from "../../../assets/images/icons/fire-icon.svg";
-import arrowLeftIcon from "../../../assets/images/icons/arrow-left-icon.svg";
+import arrowRightIcon from "../../../assets/images/icons/arrow-right-icon.svg";
 import closeIcon from "../../../assets/images/icons/close-icon.svg";
 import { Link } from 'react-router-dom';
 import Button from "../../UI/Button/Button";
@@ -22,7 +22,7 @@ const PromoCard = () => {
           </p>
         </div>
         
-          <Link><Button size={'mediumIcon'} innerText={'Order now'} icon={arrowLeftIcon}/></Link>
+          <Link><Button size={'mediumIcon'} innerText={'Order now'} icon={arrowRightIcon}/></Link>
         
       </div>
     </div>

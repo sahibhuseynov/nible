@@ -10,17 +10,18 @@ import filterIcon from '../../assets/images/icons/filter-icon.svg'
 import cartIcon from '../../assets/images/icons/shopping-cart-icon.svg'
 import searchIcon from '../../assets/images/icons/search-icon.svg'
 import hamburgerIcon from '../../assets/images/icons/menu-icon.svg'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const Navigation = () => {
+  const navigate = useNavigate(); // react router dom'dan gelen navigate fonksiyonu
+
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768) // sayfa ilk yüklendiğinde mobilde mi yoksa desktopta mı olduğumuzu belirlemek için
   const [isClicked, setIsClicked] = useState(false) // hamburger menu açık mı kapalı mı olduğunu belirlemek için
   const searchRef = useRef(null) // search bar ref
   const handleSearch = () => {
-    if(!isClicked) {
+    if(!isClicked  ) {
       searchRef.current.classList.toggle('mobile')
       setIsClicked(true)
-
-    }
+    } 
   }
   useEffect(() => {
     const handleResize = () => {
@@ -29,8 +30,13 @@ const Navigation = () => {
     window.addEventListener('resize', handleResize)
     return () => {
       window.removeEventListener('resize', handleResize) // unmount edildiğinde event listener'ı kaldırıyoruz
+      
     }
+    
   }, [])
+  const handleGoBack = () => {
+    navigate(-1)
+  }
   return (
     <div className='navigation__container'>
         <div className="navigation__left">
@@ -62,7 +68,7 @@ const Navigation = () => {
            {/* hamburger menu */}
           
         {
-          isClicked ? <div className='back__item'>
+          isClicked ? <div className='back__item' onClick={handleGoBack}>
               <img src={arrowLeft} alt="" />
           </div> :
           <div className="hamburger__menu">
