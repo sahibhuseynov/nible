@@ -1,42 +1,49 @@
 $box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 $transition:all 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
 
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 40px
+}
 
-@mixin mobile {
-    @media (max-width: 480px) {
-      @content;
-    }
+h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 32px
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 32px;
+}
+h4 {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 24px;
   }
-  @mixin mobile2 {
-    @media (max-width: 650px) {
-      @content;
-    }
+  h5 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
   }
-  @mixin tablet {
-    @media (max-width: 768px) {
-      @content;
-    }
+  h6{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
   }
-  @mixin laptop {
-    @media (max-width: 991px) {
-      @content;
-    }
-  }
-  @mixin desktop {
-    @media (max-width: 1280px) {
-      @content;
-    }
-  }
-  
-  @mixin desktop2 {
-    @media (max-width: 1085px) {
-      @content;
-    }
-    
-  }
-  @mixin desktop3 {
-    @media (max-width: 1345px) {
-      @content;
-    }
-    
-  }
+
+p.caption-1{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #626264;
+}
+span.caption-1{
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    color: #626264;
+}
+

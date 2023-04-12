@@ -1,74 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Farro:wght@400;500;700&display=swap');
 
-// Değişkenler
-$base-font-size: 16px;
-$base-line-height: 1.5;
-$base-font-family: 'Farro', sans-serif;
-$base-text-color: #182135;
-
-$heading-font-family: 'Farro', sans-serif;
-$heading-font-weight: 700;
-
-// Mixinler
-@mixin base-typography {
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-  font-family: $base-font-family;
-  color: $base-text-color;
-}
-
-@mixin heading-typography {
-  font-family: $heading-font-family;
-  font-weight: $heading-font-weight;
-}
-
-// Stiller
-body {
-  @include base-typography;
-}
-
-h1 {
-  @include heading-typography;
-  font-size: 2rem;
-  line-height: 40px
-}
-
-h2 {
-  @include heading-typography;
-  font-size: 1.5rem;
-  line-height: 32px
-}
-
-h3 {
-  @include heading-typography;
-  font-size: 1.25rem;
-
-}
-h4 {
-    @include heading-typography;
-    font-size: 1rem;
-    line-height: 24px;
+// responsive settings mixins
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
   }
-  h5 {
-    @include heading-typography;
-    font-size: 14px;
-    line-height: 24px;
+}
+@mixin mobile2 {
+  @media (max-width: 650px) {
+    @content;
   }
-
-p.caption-1{
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    color: #626264;
 }
-span.caption-1{
-    font-weight: 400;
-    font-size: 11px;
-    line-height: 16px;
-    color: #626264;
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (max-width: 1280px) {
+    @content;
+  }
 }
 
-//
+@mixin desktop2 {
+  @media (max-width: 1085px) {
+    @content;
+  }
+  
+}
+@mixin desktop3 {
+  @media (max-width: 1345px) {
+    @content;
+  }
+  
+}
+
 @mixin flex-center {
   display: flex;
   justify-content: center;

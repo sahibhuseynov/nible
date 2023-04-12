@@ -1,0 +1,26 @@
+@import '../../../styles/index.scss';
+
+.restaurant__card{
+    display: flex;
+    column-gap: 24px;
+    .card__image{
+        @include flex-center;
+        padding: 16px;
+        background: #F7F7F7;
+        border-radius: 12px;
+    }
+    .card__content{
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+        .content__info{
+            display: flex;
+            align-items: center;
+            column-gap: 16px;
+            .info__item{
+                display: flex;
+                column-gap: 8px;
+            }
+        }
+    }
+}
