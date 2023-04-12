@@ -1,0 +1,23 @@
+@import '../../../styles/index.scss';
+
+.category__card{
+    width: 152px;
+    margin: auto;
+    @include flex-center;
+    flex-direction: column;
+    padding: 24px;
+    border-radius: 12px;
+    background: #F7F7F7;
+    .category__card__image{
+        @include flex-center;
+        width: 48px;
+        height: 48px;
+        background-color: #FB6D3A;
+        border-radius: 9px;
+        margin-bottom: 16px;
+    }
+    h4{
+        margin-bottom: 4px;
+    }
+    
+}

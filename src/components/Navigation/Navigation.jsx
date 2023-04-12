@@ -11,19 +11,25 @@ import cartIcon from '../../assets/images/icons/shopping-cart-icon.svg'
 import searchIcon from '../../assets/images/icons/search-icon.svg'
 import hamburgerIcon from '../../assets/images/icons/menu-icon.svg'
 import { Link, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 const Navigation = () => {
   const navigate = useNavigate(); // react router dom'dan gelen navigate fonksiyonu
+  const location = useLocation(); // react router dom'dan gelen location fonksiyonu
 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768) // sayfa ilk yüklendiğinde mobilde mi yoksa desktopta mı olduğumuzu belirlemek için
   const [isClicked, setIsClicked] = useState(false) // hamburger menu açık mı kapalı mı olduğunu belirlemek için
   const searchRef = useRef(null) // search bar ref
   const handleSearch = () => {
-    if(!isClicked  ) {
+    if(isClicked === false  ) {
       searchRef.current.classList.toggle('mobile')
       setIsClicked(true)
     } 
   }
   useEffect(() => {
+    if(location.pathname !== '/search') {
+      setIsClicked(false)
+      searchRef.current.classList.remove('mobile')
+    }
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768) // pencere boyutu değiştiğinde, mobilde mi yoksa desktopta mı olduğumuzu kontrol ediyoruz
     }
@@ -32,8 +38,9 @@ const Navigation = () => {
       window.removeEventListener('resize', handleResize) // unmount edildiğinde event listener'ı kaldırıyoruz
       
     }
+   
     
-  }, [])
+  }, [location.pathname])
   const handleGoBack = () => {
     navigate(-1)
   }
