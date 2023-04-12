@@ -22,5 +22,20 @@
                 column-gap: 8px;
             }
         }
+        .content__bottom{
+            display: flex;
+            justify-content: space-between;
+            .delivery__info{
+                @include flex-center;
+                padding: 4px 8px;
+                background: rgba(80, 62, 157, 0.1);
+                border-radius: 4px;
+            }
+            .price__info{
+                display: flex;
+                align-items: center;
+                column-gap: 8px;
+            }
+        }
     }
 }

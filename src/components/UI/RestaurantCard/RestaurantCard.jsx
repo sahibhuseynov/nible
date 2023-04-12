@@ -3,6 +3,7 @@ import './RestaurantCard.scss'
 import burgerKing from '../../../assets/images/burgerKing.svg'
 import starIcon from '../../../assets/images/icons/star-icon.svg'
 import silverwareIcon from '../../../assets/images/icons/silverware-icon.svg'
+import moneyIcon from '../../../assets/images/icons/money-icon.svg'
 const RestaurantCard = () => {
   return (
     <div className='restaurant__card'>
@@ -25,6 +26,15 @@ const RestaurantCard = () => {
                     <span className='caption-1'>
                     Burger
                     </span>
+                </div>
+            </div>
+            <div className="content__bottom">
+                <div className="delivery__info">
+                    <span className='caption-2'>Free delivery</span>
+                </div>
+                <div className="price__info">
+                    <img src={moneyIcon} alt="" />
+                    <span className='caption-1'>$10.00</span>
                 </div>
             </div>
         </div>

@@ -32,14 +32,18 @@ const SliderCategories = () => {
               breakpoint: 1000,
               settings: {
                 slidesToShow: 3,
-                slidesToScroll: 3
+                slidesToScroll: 3,
+                infinity: true,
+                  dots: true
               }
             },
             {
                 breakpoint: 768,
                 settings: {
                   slidesToShow: 3,
-                  slidesToScroll: 2
+                  slidesToScroll: 2,
+                  infinity: true,
+                  dots: true
                 }
               },
             

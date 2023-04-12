@@ -1,6 +1,7 @@
 @import '../../../styles/index.scss';
 
 .category__card{
+    margin: auto;
     width: 152px;
     @include flex-center;
     flex-direction: column;
