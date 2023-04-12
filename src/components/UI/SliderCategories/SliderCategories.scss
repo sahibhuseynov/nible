@@ -1,16 +1,5 @@
 @import '../../../styles/index.scss';
-.slick-slide {
-    margin:  4px 0;
-   @include laptop{
-    margin: 10px 1px  !important;
-   }
-   
+.slick-slider{
+    height: 162px;
 }
-
-/* the parent */
-.slick-list {
-    @include laptop {
-        margin: 0   !important;
-
-    }
-}
+    
