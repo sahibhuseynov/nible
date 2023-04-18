@@ -13,6 +13,13 @@ border-radius: 0px 24px 24px 0px;
     padding: 32px 28px;
     align-items: center;
 }
+@include mobile{
+    height: 90px;
+    width: 100%;
+    border-radius: 0;
+    align-items: inherit;
+    padding: 16px 32px;
+}
     .sidebar__top{
         display: flex;
         align-items: center;
@@ -22,6 +29,9 @@ border-radius: 0px 24px 24px 0px;
         @include tablet{
             margin-left: 0;
             margin-bottom: 48px;
+        }
+        @include mobile{
+            display: none;
         }
         .sidebar__img{
             width: 50px;
@@ -45,13 +55,21 @@ border-radius: 0px 24px 24px 0px;
         display: flex;
         flex-direction: column;
         margin-bottom: 116px;
+        @include mobile{
+            flex-direction: row;
+            margin-bottom: 0;
+        }
         .sidebar__link{
             width: 100%;
             display: flex;
             align-items: center;
+            
             column-gap: 24px;
             padding: 16px;
             border-radius: 12px;
+            @include mobile{
+                justify-content: center;
+            }
            h4{
             font-weight: 400; 
            color: #626264;
@@ -87,6 +105,9 @@ border-radius: 0px 24px 24px 0px;
         @include tablet{
             margin-left: 0;
             margin-top: auto;
+        }
+        @include mobile{
+            display: none;
         }
         .sidebar__user__img{
             width: 48px;
