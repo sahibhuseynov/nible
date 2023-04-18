@@ -46,7 +46,25 @@ const SliderCategories = () => {
                   dots: true
                 }
               },
-            
+              {
+                breakpoint: 640,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2,
+                  infinity: true,
+                  dots: true
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  infinity: true,
+                  dots: true
+                }
+              },
+
           ]
       };
   return (
@@ -55,7 +73,7 @@ const SliderCategories = () => {
             <div>
                 <CategoryCard />
             </div>
-            
+
             <div>
                 <CategoryCard />
             </div>
@@ -71,8 +89,8 @@ const SliderCategories = () => {
             <div>
                 <CategoryCard />
             </div>
-            
-            
+
+
         </Slider>
     </>
   )
