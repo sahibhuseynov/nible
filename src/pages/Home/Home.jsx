@@ -4,6 +4,7 @@ import CategoryCard from '../../components/UI/CategoryCard/CategoryCard'
 import chevronRight from '../../assets/images/icons/chevron-right-icon.svg'
 import SliderCategories from '../../components/UI/SliderCategories/SliderCategories'
 import RestaurantCard from '../../components/UI/RestaurantCard/RestaurantCard'
+import Foods from '../../components/Foods/Foods'
 const Home = () => {
   return (
     <div className='home'>
@@ -26,7 +27,7 @@ const Home = () => {
             <img src={chevronRight} alt="" />
           </div>
         </div>
-        <RestaurantCard />
+        <Foods />
       </section>
     </div>
   )
