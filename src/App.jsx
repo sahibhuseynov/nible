@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Explore from "./pages/Explore/Explore";
 import Navigation from "./components/Navigation/Navigation";
 import Search from "./pages/Search/Search";
+import Settings from './pages/Settings/Settings';
 
 const Layout = () => {
   return (
@@ -25,7 +26,8 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/explore", element: <Explore /> },
-      { path: "/search", element: <Search />}
+      { path: "/search", element: <Search />},
+      { path: "/settings", element: <Settings />}
     ],
   },
 ]);

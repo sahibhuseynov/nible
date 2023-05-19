@@ -49,7 +49,7 @@ const Navigation = () => {
         <div className="navigation__left">
           <div className='nav__left__item'>
             <img src={locationIcon} alt="" />
-            <span className='caption-1'>San Francisco, California</span>
+            <h5 className='caption-1'>San Francisco</h5>
             <div className='arrow__group'>
               <img src={upDownArrow} alt="" />
               <img src={bottomIcon} alt="" />
@@ -57,7 +57,7 @@ const Navigation = () => {
           </div>
           <div className='nav__left__item'>
             <img src={shoppingCartIcon} alt="" />
-            <span className='caption-1'>Pick up</span>
+            <h5 className='caption-1'>Pick up</h5>
             <div className='arrow__group'>
               <img src={upDownArrow} alt="" />
               <img src={bottomIcon} alt="" />
@@ -65,7 +65,7 @@ const Navigation = () => {
           </div>
           <div className='nav__left__item'>
             <img src={couponIcon} alt="" />
-            <span className='caption-1'>Best deals</span>
+            <h5 className='caption-1'>Best deals</h5>
             <div className='arrow__group'>
               <img src={upDownArrow} alt="" />
               <img src={bottomIcon} alt="" />

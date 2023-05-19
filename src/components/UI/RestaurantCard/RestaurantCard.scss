@@ -3,11 +3,13 @@
 .restaurant__card{
     display: flex;
     column-gap: 24px;
+
     .card__image{
         @include flex-center;
         padding: 16px;
         background: #F7F7F7;
         border-radius: 12px;
+        transition: $transition;
     }
     .card__content{
         display: flex;

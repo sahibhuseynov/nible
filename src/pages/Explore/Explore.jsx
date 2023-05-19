@@ -17,6 +17,13 @@ const Explore = () => {
         <Foods />
       </section>
       
+      <div className='items__context'>
+          <h2>Popular orders</h2>
+          <div className='see__all'>
+            <span>See all</span>
+            <img src={chevronRight} alt="" />
+          </div>
+        </div>
       <div className='foodCard__conatiner'>
         <FoodCard />
         <FoodCard />

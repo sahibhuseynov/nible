@@ -1,0 +1,43 @@
+@import '../../styles/index.scss';
+
+.settings__container{
+    h2{
+        margin-bottom: 32px;
+    }
+    .setting__item{
+        margin-bottom: 48px;
+        p{
+            font-weight: 400;
+            margin-bottom: 32px;
+            color: $text-dark-light;
+        }
+        .sub__items{
+            display: flex;
+            flex-direction: column;
+            row-gap: 32px;
+            cursor: pointer;
+            .sub__item{
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 16px;
+                border-bottom: 1px solid $gray-color-lightest;
+                transition: $transition;
+                &:hover{
+                    border-bottom: 1px solid $primary-color;
+                    img:last-child{
+                        filter: invert(100%);
+                        scale: 1.1;
+                    }
+                }
+                img{
+                    transition: $transition;
+                }
+                .info{
+                    display: flex;
+                    column-gap: 24px;
+
+                }
+            }
+        }
+    }
+}
