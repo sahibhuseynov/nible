@@ -3,8 +3,10 @@
 .sidebar{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     flex-shrink: 0;
     width: 304px;
+    height: 100vh;
     padding: 32px 16px;
     background: #F7F7F7;
 border-radius: 0px 24px 24px 0px;
@@ -24,7 +26,7 @@ border-radius: 0px 24px 24px 0px;
         display: flex;
         align-items: center;
         gap: 8px;
-        margin-bottom: 48px;
+        // margin-bottom: 48px;
         margin-left: 16px;
         @include tablet{
             margin-left: 0;
@@ -54,7 +56,7 @@ border-radius: 0px 24px 24px 0px;
     .sidebar__navigation{
         display: flex;
         flex-direction: column;
-        margin-bottom: 116px;
+       
         @include mobile{
             flex-direction: row;
             margin-bottom: 0;

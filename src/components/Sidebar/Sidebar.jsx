@@ -75,7 +75,6 @@ const Sidebar = () => {
         ))
       }
     </div>
-      <PromoCard />
       <div className="sidebar__user">
         <div className="sidebar__user__img">
           {/* <img src={userImage} alt="" /> */}
