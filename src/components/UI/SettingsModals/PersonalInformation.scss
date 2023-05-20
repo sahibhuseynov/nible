@@ -1,0 +1,93 @@
+@import '../../../styles/index.scss';
+
+.personal__info{
+    width: 400px;
+    background-color: #ffff;
+    padding: 32px;
+    border-radius: 16px;
+    .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 32px;
+        h2{
+            margin-bottom: 0;
+        }
+        img{
+            transition: $transition;
+            cursor: pointer;
+            &:hover{
+                filter: invert(100%);
+            }
+        }
+    }
+    .user__image__actions{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 24px;
+        margin-bottom: 48px;
+        .user__image{
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background-color: $tertiary-color;
+            
+        }
+        .action__btn{
+            @include flex-center;
+            width: 116px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            background-color: $primary-color;
+            color: #ffff;
+            cursor: pointer;
+            &:last-child{
+                background-color: $gray-color-247;
+                color: $text-dark;
+            }
+        }
+    }
+   .info__container{
+       display: flex;
+       flex-direction: column;
+       row-gap: 32px;
+       margin-top: 32px;
+       margin-bottom: 48px;
+    .user__information{
+        display: flex;
+        column-gap: 20px;
+        
+
+        .info__img{
+            @include flex-center;
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background-color: $primary-color-light;
+            &:last-child{
+                background-color:red;
+            }
+        }
+        .info__content{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 4px;
+            .bottom__line{
+                height: 1px;
+                background: $gray-color-lightest;
+            }
+        }
+    }
+   }
+   .upload__profile__btn{
+    @include flex-center;
+    background-color: $primary-color;
+    color: rgba(247, 250, 252, 1);
+    border-radius: 12px;
+    padding: 16px 0;
+    cursor: pointer;
+   }
+}

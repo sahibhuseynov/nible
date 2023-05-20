@@ -1,7 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-
 const store = configureStore({
-  reducer: {},
+  reducer: {
+    
+  },
   // Diğer store yapılandırma seçenekleri (middleware vb.) buraya eklenebilir
 });
 
