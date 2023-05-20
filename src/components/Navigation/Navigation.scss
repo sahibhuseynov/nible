@@ -42,6 +42,7 @@
     }
     .back__item{
         @include flex-center;
+        flex-shrink: 0;
         width: 48px;
         height: 48px;
         border-radius: 10px;
@@ -50,6 +51,7 @@
     }
     .hamburger__menu{
         @include flex-center;
+        flex-shrink: 0;
         width: 48px;
         height: 48px;
         padding: 12px;
