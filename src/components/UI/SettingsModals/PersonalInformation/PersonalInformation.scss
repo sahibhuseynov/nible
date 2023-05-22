@@ -89,5 +89,9 @@
     border-radius: 12px;
     padding: 16px 0;
     cursor: pointer;
+    transition: $transition;
+    &:hover{
+        background-color: rgb(66, 50, 136);
+    }
    }
 }

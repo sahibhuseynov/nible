@@ -13,6 +13,7 @@ import splitIcon from '../../assets/images/icons/split-icon.svg';
 import moneyIcon from '../../assets/images/icons/money-icon2.svg';
 import PersonalInformation from '../../components/UI/SettingsModals/PersonalInformation/PersonalInformation';
 import SavedAddresses from '../../components/UI/SettingsModals/SavedAdress/SavedAdress';
+import MarketingPre from '../../components/UI/SettingsModals/MarketingPre/MarketingPre';
 // Diğer bileşenleri burada import edin
 
 const SettingsItems = [
@@ -68,6 +69,7 @@ const SettingsItems = [
 const componentMap = {
   'Personal information': PersonalInformation,
   'Saved addresses': SavedAddresses,
+  'Marketing preferences': MarketingPre
   // Diğer bileşenleri burada ekleyin
 };
 
