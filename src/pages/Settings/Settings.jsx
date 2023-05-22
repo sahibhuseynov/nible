@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { openModal } from '../../store/settingsModal/settingsModal';
 import './Settings.scss';
 import chevronRight from '../../assets/images/icons/chevron-right.svg';
 import profileIcon from '../../assets/images/icons/profile-icon.svg';
@@ -9,14 +11,9 @@ import cardIcon from '../../assets/images/icons/card-icon.svg';
 import supportIcon from '../../assets/images/icons/support-icon.svg';
 import splitIcon from '../../assets/images/icons/split-icon.svg';
 import moneyIcon from '../../assets/images/icons/money-icon2.svg';
-import PersonalInformation from '../../components/UI/SettingsModals/PersonalInformation';
-// import SavedAddresses from './SavedAddresses';
-// import MarketingPreferences from './MarketingPreferences';
-// import PaymentMethods from './PaymentMethods';
-// import MyCards from './MyCards';
-// import Support from './Support';
-// import InviteFriend from './InviteFriend';
-// import Currency from './Currency';
+import PersonalInformation from '../../components/UI/SettingsModals/PersonalInformation/PersonalInformation';
+import SavedAddresses from '../../components/UI/SettingsModals/SavedAdress/SavedAdress';
+// Diğer bileşenleri burada import edin
 
 const SettingsItems = [
   {
@@ -68,12 +65,22 @@ const SettingsItems = [
   }
 ];
 
-const Settings = () => {
-  const [selectedItem, setSelectedItem] = useState(null);
+const componentMap = {
+  'Personal information': PersonalInformation,
+  'Saved addresses': SavedAddresses,
+  // Diğer bileşenleri burada ekleyin
+};
 
-  const handleItemClick = (item) => {
-    setSelectedItem(item);
-    };
+const Settings = () => {
+  const dispatch = useDispatch();
+  const modalComponent = useSelector((state) => state.settings.modalComponent);
+  const showModal = modalComponent !== null;
+  const RenderedModalComponent = componentMap[modalComponent];
+  const renderedModalComponent = RenderedModalComponent ? <RenderedModalComponent /> : null;
+
+  const handleItemClick = (componentName) => {
+    dispatch(openModal(componentName));
+  };
 
   return (
     <div className="settings__container">
@@ -83,11 +90,7 @@ const Settings = () => {
           <p>{item.title}</p>
           <div className="sub__items">
             {item.items.map((subItem, subIndex) => (
-              <div
-                className="sub__item"
-                key={subIndex}
-                onClick={() => handleItemClick(subItem)}
-              >
+              <div className="sub__item" key={subIndex} onClick={() => handleItemClick(subItem.subtitle)}>
                 <div className="info">
                   <img src={subItem.icon} alt="" />
                   <h4>{subItem.subtitle}</h4>
@@ -98,13 +101,9 @@ const Settings = () => {
           </div>
         </div>
       ))}
-      {selectedItem && (
-        <div className={`selected-component ${selectedItem ? 'open' : ''}`}>
-          {/* Seçili öğeye bağlı olarak ilgili bileşeni render et */}
-          {selectedItem.subtitle === 'Personal information' && (
-            <PersonalInformation />
-          )}
-          {/* Diğer bileşenleri buraya ekleyin */}
+      {showModal && (
+        <div className={`selected-component ${showModal ? 'open' : ''}`}>
+          {renderedModalComponent}
         </div>
       )}
     </div>

@@ -1,17 +1,20 @@
 import React from 'react'
 import './PersonalInformation.scss'
-import closeIcon from '../../../assets/images/icons/close-icon2.svg'
-import profileIcon from '../../../assets/images/icons/profile-icon.svg'
-import mailIcon from '../../../assets/images/icons/mail-icon.svg'
-import phoneIcon from '../../../assets/images/icons/phone-icon.svg'
+import { closeModal } from '../../../../store/settingsModal/settingsModal'
+import { useDispatch } from 'react-redux'
+import closeIcon from '../../../../assets/images/icons/close-icon2.svg'
+import profileIcon from '../../../../assets/images/icons/profile-icon.svg'
+import mailIcon from '../../../../assets/images/icons/mail-icon.svg'
+import phoneIcon from '../../../../assets/images/icons/phone-icon.svg'
 
 const PersonalInformation = () => {
+    const dispatch = useDispatch()
   return (
-    <div className='personal__info'>
+    <div className='settings__modal__container'>
         <div className="top">
             <h2>Personal information</h2>
             <img src={closeIcon} alt=""
-           
+            onClick={() => dispatch(closeModal())}
             />
 
         </div>
@@ -66,7 +69,7 @@ const PersonalInformation = () => {
             </div>
         </div>
         </div>
-        <div className="upload__profile__btn">
+        <div className="modal__btn">
             <h3>Update profile</h3>
         </div>
     </div>
