@@ -7,6 +7,7 @@ import RestaurantCard from '../../components/UI/RestaurantCard/RestaurantCard'
 import Foods from '../../components/Foods/Foods'
 import FoodCard from '../../components/UI/FoodCard/FoodCard'
 import HomeCard from '../../components/UI/FoodCard/HomeCard'
+import HomeCards from '../../components/HomeCards/HomeCards'
 const Home = () => {
   return (
     <div className='home'>
@@ -39,11 +40,9 @@ const Home = () => {
             <img src={chevronRight} alt="" />
           </div>
         </div>
-        <div className='foodCard__conatiner'>
-          <HomeCard />
-          <HomeCard />
-          <HomeCard />
-        </div>
+        
+          <HomeCards />
+      
       </section>
     </div>
   )
