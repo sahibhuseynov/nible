@@ -14,6 +14,9 @@ import moneyIcon from '../../assets/images/icons/money-icon2.svg';
 import PersonalInformation from '../../components/UI/SettingsModals/PersonalInformation/PersonalInformation';
 import SavedAddresses from '../../components/UI/SettingsModals/SavedAdress/SavedAdress';
 import MarketingPre from '../../components/UI/SettingsModals/MarketingPre/MarketingPre';
+import PaymentMetods from '../../components/UI/SettingsModals/PaymentMetods/PaymentMetods';
+import Support from '../../components/UI/SettingsModals/Support/Support';
+import Discounts from '../../components/UI/SettingsModals/Discounts/Discounts';
 // Diğer bileşenleri burada import edin
 
 const SettingsItems = [
@@ -60,7 +63,7 @@ const SettingsItems = [
       },
       {
         icon: moneyIcon,
-        subtitle: 'Currency'
+        subtitle: 'Discounts'
       }
     ]
   }
@@ -69,7 +72,10 @@ const SettingsItems = [
 const componentMap = {
   'Personal information': PersonalInformation,
   'Saved addresses': SavedAddresses,
-  'Marketing preferences': MarketingPre
+  'Marketing preferences': MarketingPre,
+  'Payment methods': PaymentMetods,
+  'Support': Support,
+  'Discounts': Discounts,
   // Diğer bileşenleri burada ekleyin
 };
 

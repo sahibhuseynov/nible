@@ -1,0 +1,40 @@
+@import '../../../../styles/index.scss';
+
+.metods{
+    display: flex;
+    flex-direction: column;
+    
+    .card__metod{
+        @include flex-center;
+        background-color:$primary-color;
+        border-radius: 12px;
+        padding: 16px 0;
+        cursor: pointer;
+        transition: $transition;
+        margin-bottom: 16px;
+    &:hover{
+        background-color: rgb(66, 50, 136);
+    }
+    &.selected {
+        background-color: $secondary-color;
+      }
+    }
+    .money__metods{
+        display: flex;
+        gap: 16px;
+        margin-bottom: 48px;
+      
+        .money__metod{
+            @include flex-center;
+            width: 100%;
+            padding: 16px 0;
+            border-radius: 12px;
+            cursor: pointer;
+            background-color: $gray-color-247;
+            transition: $transition;
+            &.selected {
+                background-color: $secondary-color;
+              }
+        }
+    }
+}
