@@ -15,6 +15,40 @@ const MarketingPre = () => {
             />
 
         </div>
+        <div className="check__container">
+  <div className="check__content">
+    <label htmlFor="cbx" className="cntr">
+      <input type="checkbox" id="cbx" className="hidden-xs-up" />
+      <span className="cbx"></span>
+    </label>
+    <span>Promotional emails</span>
+  </div>
+  <div className="check__content">
+    <label htmlFor="cbx" className="cntr">
+      <input type="checkbox" id="cbx" className="hidden-xs-up" />
+      <span className="cbx"></span>
+    </label>
+    <span>Monthly newsletter</span>
+  </div>
+  <div className="check__content">
+    <label htmlFor="cbx" className="cntr">
+      <input type="checkbox" id="cbx" className="hidden-xs-up" />
+      <span className="cbx"></span>
+    </label>
+    <span>Feedback collection</span>
+  </div>
+  <div className="check__content">
+    <label htmlFor="cbx" className="cntr">
+      <input type="checkbox" id="cbx" className="hidden-xs-up" />
+      <span className="cbx"></span>
+    </label>
+    <span>Discounts & offers</span>
+  </div>
+</div>
+<div className="modal__btn">
+            <h3>Update preferences</h3>
+        </div>
+
     </div>
   )
 }
