@@ -1,7 +1,7 @@
 import React from 'react'
 import Foods from './../../components/Foods/Foods';
 import chevronRight from '../../assets/images/icons/chevron-right-icon.svg'
-import FoodCard from '../../components/UI/FoodCard/FoodCard';
+import ExploreCards from '../../components/ExploreCards/ExploreCards';
 const Explore = () => {
  
   return (
@@ -24,14 +24,7 @@ const Explore = () => {
             <img src={chevronRight} alt="" />
           </div>
         </div>
-      <div className='foodCard__conatiner'>
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        </div>
+        <ExploreCards />
     </div>
   )
 }
