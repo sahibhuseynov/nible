@@ -9,11 +9,11 @@ const HomeCard = ({data}) => {
   return (
     <div className='food__card'>
         <div className='food__card__image'>
-            <img src={data.img} alt="" />
+            <img src={data.image} alt="" />
         </div>
         <div className='food__card__content'>
             <div className="card__content__top">
-            <h4>{data.name}</h4>
+            <h4>{}</h4>
             <div className="delivery__info">
                     <span className='caption-2'>Free delivery</span>
                 </div>

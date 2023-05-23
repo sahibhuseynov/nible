@@ -6,17 +6,17 @@
     
     .card__metod{
         @include flex-center;
-        background-color:$primary-color;
         border-radius: 12px;
         padding: 16px 0;
         cursor: pointer;
         transition: $transition;
         margin-bottom: 16px;
-    &:hover{
-        background-color: rgb(66, 50, 136);
-    }
+        background-color: $gray-color-247;
     &.selected {
-        background-color: $secondary-color;
+        background-color: $primary-color;
+        img{
+            filter: invert(100%);
+        }
       }
     }
     .money__metods{
@@ -33,7 +33,10 @@
             background-color: $gray-color-247;
             transition: $transition;
             &.selected {
-                background-color: $secondary-color;
+                background-color: $primary-color;
+                img{
+                    filter: invert(100%);
+                }
               }
         }
     }

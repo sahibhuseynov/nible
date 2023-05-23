@@ -17,7 +17,7 @@ const ExploreCards = () => {
     const slicedData = data.slice(0,6); // İlk 6 veriyi al
     console.log(slicedData);
   return (
-    <div className='foodCard__conatiner'>
+    <div className='foodCard__container'>
         {slicedData.map((item) => (
            
            <FoodCard key={item.id} data={item} />

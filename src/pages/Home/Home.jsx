@@ -3,11 +3,8 @@ import './Home.scss'
 import CategoryCard from '../../components/UI/CategoryCard/CategoryCard'
 import chevronRight from '../../assets/images/icons/chevron-right-icon.svg'
 import SliderCategories from '../../components/UI/SliderCategories/SliderCategories'
-import RestaurantCard from '../../components/UI/RestaurantCard/RestaurantCard'
 import Foods from '../../components/Foods/Foods'
-import FoodCard from '../../components/UI/FoodCard/FoodCard'
-import HomeCard from '../../components/UI/FoodCard/HomeCard'
-import HomeCards from '../../components/HomeCards/HomeCards'
+import HomeCards from './../../components/HomeCard/HomeCards';
 const Home = () => {
   return (
     <div className='home'>

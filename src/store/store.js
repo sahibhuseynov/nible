@@ -7,6 +7,7 @@ const store = configureStore({
   reducer: {
     settings: settingsModalReducer,
     paymentModal: paymentModalReducer,
+   
     [api.reducerPath]: api.reducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(api.middleware),

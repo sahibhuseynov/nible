@@ -9,7 +9,7 @@ const FoodCard = ({data}) => {
   return (
     <div className='food__card'>
         <div className='food__card__image'>
-            <img src={data.img} alt="" />
+            <img src={data.image} alt="" />
         </div>
         <div className='food__card__content'>
             <div className="card__content__top">

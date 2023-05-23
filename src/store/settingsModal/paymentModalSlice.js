@@ -3,7 +3,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  selectedPayment: null,
+  selectedPayment: 'card',
 };
 
 const paymentModalSlice = createSlice({

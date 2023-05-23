@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { closeModal } from '../../../../store/settingsModal/settingsModal';
 import { setSelectedPayment } from '../../../../store/settingsModal/paymentModalSlice';
 import closeIcon from '../../../../assets/images/icons/close-icon2.svg';
-import cardIcon from '../../../../assets/images/icons/card-icon2.svg';
-import moneyIcon from '../../../../assets/images/icons/money-icon3.svg';
-import paypalIcon from '../../../../assets/images/icons/paypal-icon.svg';
+import cardIcon from '../../../../assets/images/icons/card-icon3.svg';
+import moneyIcon from '../../../../assets/images/icons/mo.svg';
+import paypalIcon from '../../../../assets/images/icons/paypal-icon2.svg';
 
 const PaymentMetods = () => {
   const dispatch = useDispatch();
