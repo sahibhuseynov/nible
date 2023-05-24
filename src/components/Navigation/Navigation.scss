@@ -7,7 +7,8 @@
     // column-gap: 50px;
     margin-bottom: 48px;
     @include tablet{
-        column-gap: 32px;
+        // column-gap: 32px;
+        column-gap: 16px;
     }
     .navigation__left{
         display: flex;
