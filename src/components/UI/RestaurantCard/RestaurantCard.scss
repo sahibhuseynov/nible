@@ -2,10 +2,21 @@
 
 .restaurant__card{
     display: flex;
+    align-items: center;
     column-gap: 24px;
-
+    @media (max-width: 1200px) {
+        &:nth-child(n+5){
+            display: none
+        }
+      }
+      @media (max-width: 734px) {
+        &:nth-child(n+3){
+            display: none
+        }
+      }
     .card__image{
         @include flex-center;
+        flex-shrink: 0;
         width: 96px;
         padding: 16px;
         background: #F7F7F7;
@@ -27,11 +38,14 @@
             .info__item{
                 display: flex;
                 column-gap: 8px;
+                align-items: center;
             }
         }
         .content__bottom{
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
+            
             .delivery__info{
                 @include flex-center;
                 padding: 4px 8px;

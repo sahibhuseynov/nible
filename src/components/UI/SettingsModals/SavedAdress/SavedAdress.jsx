@@ -56,9 +56,9 @@ const SavedAdress = () => {
                 <img src={chevronRight} alt="" />
             </div>
         </div>
-        <div className="modal__btn">
+        <button className="modal__btn">
             <h3>Save changes</h3>
-        </div>
+        </button>
     </div>
   )
 }

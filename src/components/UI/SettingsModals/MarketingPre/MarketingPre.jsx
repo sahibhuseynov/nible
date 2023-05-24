@@ -45,9 +45,9 @@ const MarketingPre = () => {
     <span>Discounts & offers</span>
   </div>
 </div>
-<div className="modal__btn">
+<button className="modal__btn">
             <h3>Update preferences</h3>
-        </div>
+        </button>
 
     </div>
   )

@@ -6,8 +6,9 @@ import silverwareIcon from '../../../assets/images/icons/silverware-icon.svg'
 import deliveryIcon from '../../../assets/images/icons/delivery-icon.svg'
 
 const HomeCard = ({data}) => {
+    
   return (
-    <div className='food__card'>
+    <div className='food__card' >
         <div className='food__card__image'>
             <img src={data.image} alt="" />
         </div>

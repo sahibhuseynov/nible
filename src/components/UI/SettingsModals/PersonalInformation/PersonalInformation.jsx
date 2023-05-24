@@ -69,9 +69,9 @@ const PersonalInformation = () => {
             </div>
         </div>
         </div>
-        <div className="modal__btn">
+        <button className="modal__btn">
             <h3>Update profile</h3>
-        </div>
+        </button>
     </div>
   )
 }

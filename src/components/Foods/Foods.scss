@@ -5,4 +5,12 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 32px;
     margin-bottom: 48px;
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      }
+      @media (max-width: 734px) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+
+      }
 }
