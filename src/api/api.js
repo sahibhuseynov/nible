@@ -12,7 +12,10 @@ export const api = createApi({
     getPizza: builder.query({
       query: () => '/',
     }),
+    getPizzaById: builder.query({
+      query: (id) => `/${id}`, // ID'yi parametre olarak iletiyoruz
+    }),
   }),
 });
 
-export const { useGetPizzaQuery } = api;
+export const { useGetPizzaQuery, useGetPizzaByIdQuery } = api;

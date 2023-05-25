@@ -1,11 +1,21 @@
-import React from 'react'
+import React,{useState}from 'react'
 import './HomeCards.scss'
 import { useGetPizzaQuery } from '../../api/api'
 import HomeCard from './../UI/FoodCard/HomeCard';
+import ProductPreviewModal from './ProductPreviewModal/ProductPreviewModal';
 
 const HomeCards = () => {
     const { data, error, isLoading } = useGetPizzaQuery(1);
-
+    const [isOpen, setIsOpen] = useState(false);
+    const [selectedItemId, setSelectedItemId] = useState(null);
+    const openModal = (itemId) => {
+      setSelectedItemId(itemId);
+      setIsOpen(true);
+    };
+    const closeModal = () => {
+      setSelectedItemId(null);
+      setIsOpen(false);
+    };  
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -23,10 +33,15 @@ const HomeCards = () => {
         {slicedData.map((item) => (
            
            <HomeCard key={item.id} data={item} 
-          
+           onClick={() => openModal(item.id)}
            />
          
        ))}
+       {isOpen && (
+        <div className={`selected-component ${isOpen ? 'open' : ''}`}>
+          {<ProductPreviewModal itemId={selectedItemId} onClose={closeModal} />}
+        </div>
+      )}
     </div>
   )
     }}

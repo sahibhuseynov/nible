@@ -1,0 +1,53 @@
+@import '../../../styles/index.scss';
+
+.product__container{
+    width: 400px;
+    border-radius: 16px;
+    background-color: #FFF;
+   overflow: hidden;
+   position: relative;
+   .product__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 32px;
+    .favorite__btn{
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        @include flex-center;
+        background-color: $primary-color;
+        cursor: pointer;
+    }
+    .close__btn{
+        width: 48px;
+        height: 48px;
+        @include flex-center;
+        border-radius: 10px;
+        background-color: #FFF;
+        cursor: pointer;
+    }
+   }
+    .product__image{
+        height: 208px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .product__content{
+        padding: 32px;
+        .product__content__top{
+            margin-bottom: 32px;
+            h2{
+                margin-bottom: 8px;
+            }
+        }
+    }
+    
+}

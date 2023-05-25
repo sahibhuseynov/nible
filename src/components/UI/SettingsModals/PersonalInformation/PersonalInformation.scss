@@ -84,6 +84,7 @@
    }
    .modal__btn{
     @include flex-center;
+    width: 100%;
     background-color: $primary-color;
     color: rgba(247, 250, 252, 1);
     border-radius: 12px;

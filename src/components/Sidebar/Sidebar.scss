@@ -130,8 +130,14 @@ border-radius: 0px 24px 24px 0px;
             display: flex;
             flex-direction: column;
             row-gap: 2px;
+            
             @include tablet{
                 display: none;
+            }
+            @include laptop{
+                span{
+                    display: none;
+                }
             }
         }
         
