@@ -16,10 +16,7 @@ const HomeCards = () => {
     dispatch(openModal(itemId));
   };
 
-  // Modal kapatma fonksiyonu
-  const closeModalHandler = () => {
-    dispatch(closeModal());
-  };
+ 
   useEffect(() => {
     if (data) {
       dispatch(setData(data)); // Veriyi Redux Store'da güncellemek için setData eylemini çağırın
@@ -47,7 +44,7 @@ const HomeCards = () => {
         {/* Modal açık olduğunda, ProductPreviewModal bileşenini render et */}
         {isOpen && (
           <div className={`selected-component ${isOpen ? 'open' : ''}`}>
-            <ProductPreviewModal  onClose={closeModalHandler} />
+            <ProductPreviewModal  />
           </div>
         )}
       </div>
