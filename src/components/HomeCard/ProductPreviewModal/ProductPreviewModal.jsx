@@ -31,9 +31,7 @@ const ProductPreviewModal = () => {
     }
   };
    // Modal kapatma fonksiyonu
-   const closeModalHandler = () => {
-    dispatch(closeModal());
-  };
+   
   return (
     <div className='product__container'>
         <div className='product__header'>
