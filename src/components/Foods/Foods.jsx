@@ -1,33 +1,35 @@
-import React from 'react'
-import './Foods.scss'
+import React from 'react';
+import './Foods.scss';
 import RestaurantCard from './../UI/RestaurantCard/RestaurantCard';
-//*
-import { useGetPizzaQuery } from '../../api/api';
+import { useSelector, useDispatch } from 'react-redux';
+import { openModal } from '../../redux/slice/productModal';
+import ProductPreviewModal from './../HomeCard/ProductPreviewModal/ProductPreviewModal';
 
 const Foods = () => {
-  const { data, error, isLoading } = useGetPizzaQuery(1);
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  const dispatch = useDispatch();
+  const slicedData = useSelector((state) => state.products.slice(0, 6)); // İlk 6 ürünü al
+  const { isOpen } = useSelector((state) => state.productModal);
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
+  // Modal açma fonksiyonu
+  const openModalHandler = (itemId) => {
+    dispatch(openModal(itemId));
+  };
 
-  if (data) {
-    const slicedData = data.slice(0,6); // İlk 6 veriyi al
+  
+
   return (
     <div className='foods__container'>
-         {slicedData.map((item) => (
-           
-           <RestaurantCard key={item.id} data={item} 
-          
-           />
-         
-       ))}
+      {slicedData.map((item) => (
+        <RestaurantCard key={item.id} data={item} onClick={() => openModalHandler(item.id)} />
+      ))}
+      {/* Modal açık olduğunda, ProductPreviewModal bileşenini render et */}
+      {isOpen && (
+          <div className={`selected-component ${isOpen ? 'open' : ''}`}>
+            <ProductPreviewModal />
+          </div>
+        )}
     </div>
-  )
-         }
-}
+  );
+};
 
-export default Foods
+export default Foods;

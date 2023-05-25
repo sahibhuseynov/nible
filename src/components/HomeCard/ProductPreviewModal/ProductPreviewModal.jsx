@@ -5,7 +5,8 @@ import { addToFavorites,removeFromFavorites } from '../../../redux/slice/favorit
 import { ToastContainer, toast } from 'react-toastify';
 import heartIcon from '../../../assets/images/icons/heart-icon.svg'
 import closeIcon from '../../../assets/images/icons/close-icon16.svg'
-const ProductPreviewModal = ({onClose }) => {
+import { closeModal } from '../../../redux/slice/productModal';
+const ProductPreviewModal = () => {
   const dispatch = useDispatch();
   const { selectedItemId} = useSelector((state) => state.productModal);
   const products = useSelector((state) => state.products); // Redux store'daki ürün verilerini al
@@ -28,13 +29,17 @@ const ProductPreviewModal = ({onClose }) => {
       toast.success('Added to favorites');
     }
   };
+   // Modal kapatma fonksiyonu
+   const closeModalHandler = () => {
+    dispatch(closeModal());
+  };
   return (
     <div className='product__container'>
         <div className='product__header'>
             <div className="favorite__btn"  onClick={toggleFavorite}>
                 <img src={heartIcon} alt="" />
             </div>
-            <div className="close__btn" onClick={onClose}>
+            <div className="close__btn" onClick={closeModalHandler}>
                 <img src={closeIcon} alt="" />
             </div>
 
@@ -55,7 +60,7 @@ const ProductPreviewModal = ({onClose }) => {
         <ToastContainer 
         theme="dark"
         autoClose={2000}
-        
+
         />
 
     </div>

@@ -4,7 +4,7 @@ import './HomeCards.scss';
 import { useGetPizzaQuery } from '../../api/api';
 import HomeCard from './../UI/FoodCard/HomeCard';
 import ProductPreviewModal from './ProductPreviewModal/ProductPreviewModal';
-import { openModal, closeModal } from '../../redux/slice/productModal';
+import { openModal} from '../../redux/slice/productModal';
 import { setData } from '../../redux/slice/productSlice';
 
 const HomeCards = () => {
@@ -17,10 +17,7 @@ const HomeCards = () => {
     dispatch(openModal(itemId));
   };
 
-  // Modal kapatma fonksiyonu
-  const closeModalHandler = () => {
-    dispatch(closeModal());
-  };
+ 
   useEffect(() => {
     if (data) {
       dispatch(setData(data)); // Veriyi Redux Store'da güncellemek için setData eylemini çağırın
@@ -48,7 +45,7 @@ const HomeCards = () => {
         {/* Modal açık olduğunda, ProductPreviewModal bileşenini render et */}
         {isOpen && (
           <div className={`selected-component ${isOpen ? 'open' : ''}`}>
-            <ProductPreviewModal  onClose={closeModalHandler} />
+            <ProductPreviewModal />
           </div>
         )}
       </div>
