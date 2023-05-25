@@ -30,6 +30,10 @@ const ProductPreviewModal = () => {
       toast.success('Added to favorites');
     }
   };
+   // Modal kapatma fonksiyonu
+   const closeModalHandler = () => {
+    dispatch(closeModal());
+  };
   return (
     <div className='product__container'>
         <div className='product__header'>
@@ -57,7 +61,7 @@ const ProductPreviewModal = () => {
         <ToastContainer 
         theme="dark"
         autoClose={2000}
-        
+
         />
 
     </div>

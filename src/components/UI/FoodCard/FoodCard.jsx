@@ -4,11 +4,11 @@ import foodcardimage from '../../../assets/images/foodcard.png'
 import starIcon from '../../../assets/images/icons/star-icon.svg'
 import silverwareIcon from '../../../assets/images/icons/silverware-icon.svg'
 import deliveryIcon from '../../../assets/images/icons/delivery-icon.svg'
-import { closeModal } from '../../../redux/slice/productModal';
-const FoodCard = ({data,onClick}) => {
+
+const FoodCard = ({data}) => {
   return (
-    <div className='food__card' onClick={onClick}>
-        <div className='food__card__image' >
+    <div className='food__card'>
+        <div className='food__card__image'>
             <img src={data.image} alt="" />
         </div>
         <div className='food__card__content'>
