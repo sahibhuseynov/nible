@@ -5,20 +5,22 @@ import { addToFavorites,removeFromFavorites } from '../../../redux/slice/favorit
 import { ToastContainer, toast } from 'react-toastify';
 import heartIcon from '../../../assets/images/icons/heart-icon.svg'
 import closeIcon from '../../../assets/images/icons/close-icon16.svg'
-const ProductPreviewModal = ({onClose }) => {
+import { closeModal } from '../../../redux/slice/productModal';
+const ProductPreviewModal = () => {
   const dispatch = useDispatch();
+  // Modal kapatma fonksiyonu
+  const closeModalHandler = () => {
+    dispatch(closeModal());
+  };
   const { selectedItemId} = useSelector((state) => state.productModal);
   const products = useSelector((state) => state.products); // Redux store'daki ürün verilerini al
-
   // Seçili ürünü bul
   const selectedProduct = products.find((product) => product.id === selectedItemId);
-
   if (!selectedProduct) {
     return null; // Seçili ürün bulunamadıysa modalı gösterme
   }
   // Redux store'daki favori ürünlerin id'lerini al
   const isFavorite = useSelector((state) => state.favorites.includes(selectedItemId));
-
   const toggleFavorite = () => {
     if (isFavorite) {
       dispatch(removeFromFavorites(selectedItemId));
@@ -34,7 +36,7 @@ const ProductPreviewModal = ({onClose }) => {
             <div className="favorite__btn"  onClick={toggleFavorite}>
                 <img src={heartIcon} alt="" />
             </div>
-            <div className="close__btn" onClick={onClose}>
+            <div className="close__btn" onClick={closeModalHandler}>
                 <img src={closeIcon} alt="" />
             </div>
 
@@ -61,5 +63,4 @@ const ProductPreviewModal = ({onClose }) => {
     </div>
   )
 }
-
 export default ProductPreviewModal

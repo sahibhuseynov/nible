@@ -4,9 +4,9 @@ import burgerKing from '../../../assets/images/burgerKing.svg'
 import starIcon from '../../../assets/images/icons/star-icon.svg'
 import silverwareIcon from '../../../assets/images/icons/silverware-icon.svg'
 import moneyIcon from '../../../assets/images/icons/money-icon.svg'
-const RestaurantCard = () => {
+const RestaurantCard = ({data}) => {
   return (
-    <div className='restaurant__card'>
+    <div className='restaurant__card' >
         <div className='card__image'>
             <img src={burgerKing} alt="" />
         </div>

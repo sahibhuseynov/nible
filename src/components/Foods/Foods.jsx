@@ -19,11 +19,11 @@ const Foods = () => {
   return (
     <div className='foods__container'>
          {slicedData.map((item) => (
-           
+
            <RestaurantCard key={item.id} data={item} 
-          
+
            />
-         
+
        ))}
     </div>
   )
