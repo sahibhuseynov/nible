@@ -1,7 +1,7 @@
 import React from 'react'
 import './Discounts.scss'
 import { useDispatch } from 'react-redux'
-import { closeModal } from '../../../../store/settingsModal/settingsModal'
+import { closeModal } from '../../../../redux/slice/settingsModal/settingsModal'
 import closeIcon from '../../../../assets/images/icons/close-icon2.svg'
 import CouponCard from './../../CouponCard/CouponCard';
 

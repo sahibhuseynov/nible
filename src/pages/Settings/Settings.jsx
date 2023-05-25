@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { openModal } from '../../store/settingsModal/settingsModal';
+import { openModal } from '../../redux/slice/settingsModal/settingsModal';
 import './Settings.scss';
 import chevronRight from '../../assets/images/icons/chevron-right.svg';
 import profileIcon from '../../assets/images/icons/profile-icon.svg';

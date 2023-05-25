@@ -1,8 +1,8 @@
 import React from 'react';
 import './PaymentMetods.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { closeModal } from '../../../../store/settingsModal/settingsModal';
-import { setSelectedPayment } from '../../../../store/settingsModal/paymentModalSlice';
+import { closeModal } from '../../../../redux/slice/settingsModal/settingsModal';
+import { setSelectedPayment } from '../../../../redux/slice/settingsModal/paymentModalSlice';
 import closeIcon from '../../../../assets/images/icons/close-icon2.svg';
 import cardIcon from '../../../../assets/images/icons/card-icon3.svg';
 import moneyIcon from '../../../../assets/images/icons/mo.svg';

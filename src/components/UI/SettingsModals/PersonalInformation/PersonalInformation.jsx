@@ -1,6 +1,6 @@
 import React from 'react'
 import './PersonalInformation.scss'
-import { closeModal } from '../../../../store/settingsModal/settingsModal'
+import { closeModal } from '../../../../redux/slice/settingsModal/settingsModal'
 import { useDispatch } from 'react-redux'
 import closeIcon from '../../../../assets/images/icons/close-icon2.svg'
 import profileIcon from '../../../../assets/images/icons/profile-icon.svg'

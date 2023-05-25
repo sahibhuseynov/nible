@@ -1,21 +1,32 @@
-import React,{useState}from 'react'
-import './HomeCards.scss'
-import { useGetPizzaQuery } from '../../api/api'
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import './HomeCards.scss';
+import { useGetPizzaQuery } from '../../api/api';
 import HomeCard from './../UI/FoodCard/HomeCard';
 import ProductPreviewModal from './ProductPreviewModal/ProductPreviewModal';
+import { openModal, closeModal } from '../../redux/slice/productModal';
+import { setData } from '../../redux/slice/productSlice';
 
 const HomeCards = () => {
-    const { data, error, isLoading } = useGetPizzaQuery(1);
-    const [isOpen, setIsOpen] = useState(false);
-    const [selectedItemId, setSelectedItemId] = useState(null);
-    const openModal = (itemId) => {
-      setSelectedItemId(itemId);
-      setIsOpen(true);
-    };
-    const closeModal = () => {
-      setSelectedItemId(null);
-      setIsOpen(false);
-    };  
+  const { data, error, isLoading } = useGetPizzaQuery(1);
+  const dispatch = useDispatch();
+  const {isOpen } = useSelector((state) => state.productModal);
+
+  // Modal açma fonksiyonu
+  const openModalHandler = (itemId) => {
+    dispatch(openModal(itemId));
+  };
+
+  // Modal kapatma fonksiyonu
+  const closeModalHandler = () => {
+    dispatch(closeModal());
+  };
+  useEffect(() => {
+    if (data) {
+      dispatch(setData(data)); // Veriyi Redux Store'da güncellemek için setData eylemini çağırın
+    }
+  }, [data, dispatch]);
+
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -25,26 +36,24 @@ const HomeCards = () => {
   }
 
   if (data) {
-    const slicedData = data.slice(0,3); // İlk 6 veriyi al
-    console.log(slicedData);
-   
-  return (
-    <div className='foodCard__container'>
-        {slicedData.map((item) => (
-           
-           <HomeCard key={item.id} data={item} 
-           onClick={() => openModal(item.id)}
-           />
-         
-       ))}
-       {isOpen && (
-        <div className={`selected-component ${isOpen ? 'open' : ''}`}>
-          {<ProductPreviewModal itemId={selectedItemId} onClose={closeModal} />}
-        </div>
-      )}
-    </div>
-  )
-    }}
+    const slicedData = data.slice(0, 3);
 
-    
-export default HomeCards
+    return (
+      <div className='foodCard__container'>
+        {/* Ürün kartlarını ekrana render et */}
+        {slicedData.map((item) => (
+          <HomeCard key={item.id} data={item} onClick={() => openModalHandler(item.id)} />
+        ))}
+
+        {/* Modal açık olduğunda, ProductPreviewModal bileşenini render et */}
+        {isOpen && (
+          <div className={`selected-component ${isOpen ? 'open' : ''}`}>
+            <ProductPreviewModal  onClose={closeModalHandler} />
+          </div>
+        )}
+      </div>
+    );
+  }
+};
+
+export default HomeCards;

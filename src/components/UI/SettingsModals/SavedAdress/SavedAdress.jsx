@@ -1,7 +1,7 @@
 import React from 'react'
 import './SavedAdress.scss'
 import { useDispatch } from 'react-redux'
-import { closeModal } from '../../../../store/settingsModal/settingsModal'
+import { closeModal } from '../../../../redux/slice/settingsModal/settingsModal'
 import closeIcon from '../../../../assets/images/icons/close-icon2.svg'
 import profileIcon from '../../../../assets/images/icons/profile-icon.svg'
 import chevronRight from '../../../../assets/images/icons/chevron-right2.svg';
