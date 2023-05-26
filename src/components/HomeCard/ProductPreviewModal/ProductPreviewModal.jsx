@@ -6,6 +6,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import heartIcon from '../../../assets/images/icons/heart-icon.svg'
 import closeIcon from '../../../assets/images/icons/close-icon16.svg'
 import { closeModal } from '../../../redux/slice/productModal';
+import minusIcon from '../../../assets/images/icons/minus-icon.svg'
+import plusIcon from '../../../assets/images/icons/plus-icon.svg'
 const ProductPreviewModal = () => {
   const dispatch = useDispatch();
   // Modal kapatma fonksiyonu
@@ -49,12 +51,57 @@ const ProductPreviewModal = () => {
         <div className='product__content'>
           <div className='product__content__top'>
             <h2>
-              {selectedProduct.title}
+              {selectedProduct.title.slice(0, 25)}
             </h2>
             <span>
-              {selectedProduct.description}
+            Served with basmati rice, brown rice or bulgur pilaf, skewered with grilled vegetables
             </span>
             </div>
+            <div className="choice-required">
+              <h4>Rice choice</h4>
+              <div className='required__btn'>
+                  <span className='caption-2'>Required</span>
+              </div>
+            </div>
+            <div className="check__container">
+  <div className="check__content">
+    <label htmlFor="cbx" className="cntr">
+      <input type="checkbox" id="cbx" className="hidden-xs-up" />
+      <span className="cbx"></span>
+    </label>
+    <span>Brown rice</span>
+  </div>
+  <div className="check__content">
+    <label htmlFor="cbx" className="cntr">
+      <input type="checkbox" id="cbx" className="hidden-xs-up" />
+      <span className="cbx"></span>
+    </label>
+    <span>Basmati rice</span>
+  </div>
+  <div className="check__content">
+    <label htmlFor="cbx" className="cntr">
+      <input type="checkbox" id="cbx" className="hidden-xs-up" />
+      <span className="cbx"></span>
+    </label>
+    <span>Bulgur Pilaf</span>
+  </div>
+ 
+</div>
+    <div className="add__cart">
+      <div className="product__quantity">
+        <button className="minus__btn">
+          <img src={minusIcon} alt="" />
+        </button>
+        <h3>1</h3>
+        <button className="plus__btn">
+          <img src={plusIcon} alt="" />
+        </button>
+      </div>
+      <div className="add__cart__btn">
+        <h3 >Add ($15,00)</h3>
+      </div>
+    </div>
+
         </div>
         <ToastContainer 
         theme="dark"

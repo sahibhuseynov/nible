@@ -1,12 +1,10 @@
 import React from 'react';
 import './FoodCard.scss';
-import foodcardimage from '../../../assets/images/foodcard.png'
 import starIcon from '../../../assets/images/icons/star-icon.svg'
 import silverwareIcon from '../../../assets/images/icons/silverware-icon.svg'
 import deliveryIcon from '../../../assets/images/icons/delivery-icon.svg'
 
 const FoodCard = ({data,onClick}) => {
-    console.log(data)
   return (
     <div className='food__card' onClick={onClick}>
         <div className='food__card__image'>
