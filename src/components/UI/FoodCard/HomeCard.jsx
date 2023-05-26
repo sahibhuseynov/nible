@@ -14,7 +14,7 @@ const HomeCard = ({data,onClick}) => {
         </div>
         <div className='food__card__content'>
             <div className="card__content__top">
-            <h4>{}</h4>
+            <h4>{data.title.slice(0,22)}</h4>
             <div className="delivery__info">
                     <span className='caption-2'>Free delivery</span>
                 </div>
