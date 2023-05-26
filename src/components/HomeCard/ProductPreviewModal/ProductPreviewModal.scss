@@ -23,6 +23,9 @@
         background-color: $primary-color;
         cursor: pointer;
     }
+    .active{
+        background-color: red;
+    }
     .close__btn{
         width: 48px;
         height: 48px;

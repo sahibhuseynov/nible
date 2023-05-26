@@ -35,7 +35,7 @@ const ProductPreviewModal = () => {
   return (
     <div className='product__container'>
         <div className='product__header'>
-            <div className="favorite__btn"  onClick={toggleFavorite}>
+            <div className={`favorite__btn ${isFavorite ? 'active' : ''}`}  onClick={toggleFavorite}>
                 <img src={heartIcon} alt="" />
             </div>
             <div className="close__btn" onClick={closeModalHandler}>

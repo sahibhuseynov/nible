@@ -26,7 +26,7 @@ const navItems = [
     id: 3,
     title: "Favourites",
     icon: bookmarkIcon,
-    path: "/favourites",
+    path: "/favorites",
   },
   {
     id: 4,

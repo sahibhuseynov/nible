@@ -6,6 +6,7 @@ import silverwareIcon from '../../../assets/images/icons/silverware-icon.svg'
 import deliveryIcon from '../../../assets/images/icons/delivery-icon.svg'
 
 const FoodCard = ({data,onClick}) => {
+    console.log(data)
   return (
     <div className='food__card' onClick={onClick}>
         <div className='food__card__image'>
@@ -13,7 +14,7 @@ const FoodCard = ({data,onClick}) => {
         </div>
         <div className='food__card__content'>
             <div className="card__content__top">
-            <h4>{data.name}</h4>
+            <h4>{data.title.slice(0,20)}</h4>
             <div className="delivery__info">
                     <span className='caption-2'>Free delivery</span>
                 </div>

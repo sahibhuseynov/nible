@@ -5,6 +5,7 @@ import Explore from "./pages/Explore/Explore";
 import Navigation from "./components/Navigation/Navigation";
 import Search from "./pages/Search/Search";
 import Settings from './pages/Settings/Settings';
+import Favorites from "./pages/Favorites/Favorites";
 
 const Layout = () => {
   return (
@@ -27,7 +28,8 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/explore", element: <Explore /> },
       { path: "/search", element: <Search />},
-      { path: "/settings", element: <Settings />}
+      { path: "/settings", element: <Settings />},
+      { path: "/favorites", element: <Favorites />}
     ],
   },
 ]);
